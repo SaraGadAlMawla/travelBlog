@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, p, a{
+  margin: 0;
+}
+.header{
+  background-color: #F55A5A;
+  position: fixed;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  margin-bottom: 36px;
+}
+
+.header-text{
+  margin-left: 10px;
+}
+
+.link, .icon, .country{
+  display: inline;
+  margin-right: 5px;
+}
+
+.country{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.link{
+  text-decoration: underline;
+  color: #918E9B;
+}
+
+.trip{
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr 2.5fr 1fr;
+  max-height: 40vh;
+  grid-template-areas: 
+  "pic gap1"
+  "pic location"
+  "pic title"
+  "pic date"
+  "pic description"
+  "pic gap2";
+  gap: 0 20px;
+  margin-bottom: 36px;
+  font-size: 11px;
+}
+
+.trip-pic{
+  grid-area: pic;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 40vh;
+  border-radius: 5px;
+}
+
+.trips-container{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.trip-name{
+  grid-area: title;
+  font-size: 25px;
+}
+
+.location-info{
+  grid-area: location;
+}
+
+.date{
+  grid-area: date;
+  font-weight: 700;
+}
+
+.description{
+  grid-area: description;
+  font-size: 12px;
+}
